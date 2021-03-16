@@ -1,0 +1,79 @@
+body {
+  margin-bottom: 16px;
+}
+
+* {
+  user-select: none;
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 600;;
+  color: var(--vscode-settings-headerForeground);
+}
+
+.libs-container {
+  margin-bottom: 20px;
+}
+
+.libs-container > div {
+  margin-bottom: 8px;
+  display: flex;
+  align-content: center;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.libs-container > div:hover {
+  cursor: pointer;
+}
+
+.libs-container > div div {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.checkbox-box i::before {
+  content: "";
+}
+
+.libs-container > div.checked i::before {
+  content: "\eab2"; /* check mark */
+}
+
+.select-buttons {
+  display: flex;
+}
+
+.select-all-button {
+  margin-right: 8px;
+}
+
+.checkbox-box {
+  height: 18px;
+  width: 18px;
+  background-color: var(--vscode-checkbox-background);
+  border: 1px solid var(--vscode-checkbox-border);
+  color: var(--vscode-checkbox-foreground);
+  border-radius: 3px;
+  margin-right: 9px;
+  font-size: 16px;
+  flex: 0 0 auto;
+}
+
+.reload-button {
+  color: var(--vscode-textLink-foreground);
+}
+
+.reload-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.refresh-button {
+  margin-bottom: 8px;
+}

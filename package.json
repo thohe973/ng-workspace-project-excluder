@@ -1,0 +1,65 @@
+{
+  "name": "ng-workspace-project-excluder",
+  "displayName": "Angular Workspace Project Excluder",
+  "description": "An easy way to exclude projects",
+  "publisher": "thohe",
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thohe973/ng-workspace-project-excluder.git"
+  },
+  "icon": "resources/angular-x.png",
+  "engines": {
+    "vscode": "^1.53.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onView:ng-workspace-project-excluder.excludeView"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "ngExcludeView",
+          "title": "Angular Workspace Project Excluder",
+          "icon": "resources/ng-x-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "ngExcludeView": [
+        {
+          "type": "webview",
+          "id": "ng-workspace-project-excluder.excludeView",
+          "name": ""
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts"
+  },
+  "dependencies": {
+    "vscode-codicons": "0.0.15"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.53.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "eslint": "^7.19.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.1",
+    "@typescript-eslint/parser": "^4.14.1",
+    "glob": "^7.1.6",
+    "mocha": "^8.2.1",
+    "typescript": "^4.1.3",
+    "vscode-test": "^1.5.0"
+  }
+}
