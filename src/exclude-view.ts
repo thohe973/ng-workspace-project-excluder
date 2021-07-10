@@ -120,7 +120,6 @@ export class ExcludeView implements vscode.WebviewViewProvider {
     const styleMainUri = webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, 'media', 'main.css'));
 
     const codiconsUri = webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, 'node_modules', 'vscode-codicons', 'dist', 'codicon.css'));
-    const codiconsFontUri = webview.asWebviewUri(vscode.Uri.joinPath(this._extensionUri, 'node_modules', 'vscode-codicons', 'dist', 'codicon.ttf'));
 
     const nonce = getNonce();
 
@@ -135,7 +134,7 @@ export class ExcludeView implements vscode.WebviewViewProvider {
 				-->
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src ${codiconsFontUri}; style-src ${webview.cspSource} ${codiconsUri}; script-src 'nonce-${nonce}';">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'none'; font-src ${webview.cspSource}; style-src ${webview.cspSource}; script-src 'nonce-${nonce}';">
         <link href="${codiconsUri}" rel="stylesheet" />
 
 				<link href="${styleResetUri}" rel="stylesheet">
